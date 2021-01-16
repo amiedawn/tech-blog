@@ -4,11 +4,11 @@ const { Post, User, Comment, Vote } = require("../models");
 
 // get all posts for homepage
 router.get("/", (req, res) => {
-  console.log("======================");
+  console.log("======================get all posts for homepage");
   Post.findAll({
     attributes: [
       "id",
-      "post_url",
+      "post_content",
       "title",
       "created_at",
       [
@@ -35,7 +35,8 @@ router.get("/", (req, res) => {
   })
     .then((dbPostData) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-
+      console.log ("dbpostdata", dbPostData);
+      console.log("posts", posts);
       res.render("homepage", {
         posts,
         loggedIn: req.session.loggedIn,
@@ -55,7 +56,7 @@ router.get("/post/:id", (req, res) => {
     },
     attributes: [
       "id",
-      "post_url",
+      "post_content",
       "title",
       "created_at",
       [
