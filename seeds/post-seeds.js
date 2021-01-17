@@ -28,7 +28,7 @@ const postData = [
   {
     title: "Ars Technica is #5",
     post_content:
-      "Founded by Ken Fisher over 20 years ago, Ars Technica (Art of Technology) is devoted to the latest technology that would cater to what he called "alpha geeks": technologists and IT professionals.",
+      "Founded by Ken Fisher over 20 years ago, Ars Technica (Art of Technology) is devoted to the latest technology that would cater to what he called 'alpha geeks': technologists and IT professionals.",
     user_id: 4,
   },
 ];
