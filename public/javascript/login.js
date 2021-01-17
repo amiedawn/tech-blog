@@ -5,6 +5,9 @@ async function loginFormHandler(event) {
   const password = document.querySelector("#password-login").value.trim();
 
   if (username && password) {
+    console.log("first in signup");
+    console.log("username", username);
+    console.log("password", password);
     const response = await fetch("/api/users/login", {
       method: "post",
       body: JSON.stringify({
@@ -30,7 +33,11 @@ async function signupFormHandler(event) {
   const password = document.querySelector("#password-signup").value.trim();
 
   if (username && password) {
+    console.log("first in signup");
+    console.log("username", username);
+    console.log("password", password);
     const response = await fetch("/api/users", {
+      
       method: "post",
       body: JSON.stringify({
         username,
@@ -39,7 +46,7 @@ async function signupFormHandler(event) {
       headers: { "Content-Type": "application/json" },
     });
 
-    console.log(inside signup);
+    console.log("2nd in signup");
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {

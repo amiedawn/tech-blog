@@ -79,6 +79,8 @@ router.post("/", (req, res) => {
 
 router.post("/login", (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+  console.log("user-route login...");
+  console.log("req.body", req.body);
   User.findOne({
     where: {
      // email: req.body.email,
@@ -90,7 +92,12 @@ router.post("/login", (req, res) => {
       return;
     }
 
+    console.log("in login user-route");
+    console.log("username", req.body.username);
+
     const validPassword = dbUserData.checkPassword(req.body.password);
+
+    console.log("password", validPassword);
 
     if (!validPassword) {
       res.status(400).json({ message: "Incorrect password!" });
