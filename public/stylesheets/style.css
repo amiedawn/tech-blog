@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html { 
+   background-color: rgb(53, 147, 175);
+}
+
 body, html {
   height: 100%;
   padding: 0;
@@ -10,15 +14,17 @@ body, html {
   color: #333;
 }
 
+/* homepage post title */
 a {
   text-decoration: none;
   color: #225ca3;
   font-weight: bold;
   transition: color .1s;
+  font-size: smaller;
 }
 
 a:hover {
-  color: #3486eb;
+  color: darkblue;;
 }
 
 button {
@@ -74,12 +80,21 @@ form label {
   flex-direction: column;
 }
 
+/* navigation menu */
 header {
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
+  font-size: 30px;
+}
+
+nav ul {
+  padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
 }
 
 header h1 {
@@ -98,7 +113,7 @@ main {
   cursor: pointer;
   text-decoration: none;
   color: #225ca3;
-  font-size: 100%;
+  font-size: 25px;
   font-weight: bold;
   transition: color .1s;
   margin-left: 16px;
@@ -106,7 +121,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: darkblue;
 }
 
 .delete-post-btn {
@@ -117,15 +132,23 @@ main {
   background-color: #ff643d;
 }
 
+/* per post tagline on homepage */
 .post {
   margin-bottom: 2%;
   line-height: 150%;
-}
+ }
 
+ /* per post text on homepage */
 .post .title span {
   font-style: italic;
-  font-size: 90%;
-  color: #7d7d7d;
+  font-size: 60%;
+  color: #302929;
+}
+
+/* number in ol on homepage and comment line */
+.post-list {
+  font-weight: bold;
+  font-size: x-large;
 }
 
 .edit-link {
@@ -155,10 +178,15 @@ main {
   background-color: #fff5eb;
 }
 
-.comment .meta {
-  font-size: 90%;
+.comment {
+  font-size: 25px;
   margin-bottom: .5%;
   opacity: .6;
+
+}
+
+.meta {
+  font-size: 20px;
 }
 
 .new-post-form input {
