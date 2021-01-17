@@ -13,7 +13,6 @@ router.get("/", withAuth, (req, res) => {
     },
     attributes: [
       "id",
-     // "post_url",
       "post_content",
       "title",
       "created_at",
@@ -98,7 +97,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
 });
 
 router.get("/new", (req, res) => {
-  res.render("new-post");
+  res.render("add-post");
 });
 
 module.exports = router;
