@@ -1,21 +1,24 @@
 <section>
-    <div class="mb-5 pt-3">
-      <a href="/dashboard/create/"><button id="create-post" class="button has-background-warning is-pulled-right">
-        New Post</button>
-      </a>
+    
     
       <h2 class="title pb-4">DASHBOARD: My Activity</h2>
+      <div class="mb-5 pt-3">
+        <a href="/dashboard/create/"><button id="create-post" class="new-post-form has-background-warning is-pulled-left">
+            Create a New Post</button>
+        </a>
       <br>
+    
     </div>
 
   <form class="new-post-form">
     <div>
-      <label for="post-title">Title:</label>
+      <br><br>
+      <label for="post-title" class="is-size-4">Title:</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-content">Post Contents:</label>
-      <textarea id="post-content" name="post-content"></textarea>
+      <label for="post-content" class="is-size-4">Post Contents:</label>
+      <input id="post-content" name="post-content" />
     </div>
     <button type="submit" class="btn">Submit New Post</button>
   </form>
@@ -34,6 +37,9 @@
     {{/each}}
   </ol>
 </section>
-{{/if}}
 
+{{else}}
+<br>
+<h3 class="is-size-3">No posts have been submitted by this user</h3>
+{{/if}}
 <script src="/javascript/add-post.js"></script>

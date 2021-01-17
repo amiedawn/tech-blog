@@ -18,11 +18,11 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    // session automatically terminates if no activity for 20 min (need resave and rolling to be true)
+    // session automatically terminates if no activity for 10 min (need resave and rolling to be true)
     maxAge: 600000,
   },
   resave: false,
-  //rolling: true,
+  rolling: true,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,
