@@ -92,7 +92,6 @@ form label {
 
 /* navigation menu */
 header {
- /* border-bottom: 1px solid #ccc; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,10 +100,9 @@ header {
 }
 
 nav ul {
-  /*padding: 20px;*/
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 header h1 {
@@ -146,12 +144,10 @@ main {
 .post {
   margin-bottom: 2%;
   line-height: 150%;
-  
  }
 
  /* per post text on homepage */
 .post .title span {
-  
   font-size: 60%;
   color: black;
 }
@@ -161,13 +157,11 @@ main {
   font-weight: bold;
   font-size: x-large;
   color: black;
-  
 }
 
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
-  
 }
 
 .upvote-btn {
@@ -197,7 +191,6 @@ main {
   margin-bottom: .5%;
   opacity: .8;
   color: rgb(32, 23, 23);
-
 }
 
 .meta {

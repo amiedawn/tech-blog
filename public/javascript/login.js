@@ -5,9 +5,6 @@ async function loginFormHandler(event) {
   const password = document.querySelector("#password-login").value.trim();
 
   if (username && password) {
-    console.log("first in signup");
-    console.log("username", username);
-    console.log("password", password);
     const response = await fetch("/api/users/login", {
       method: "post",
       body: JSON.stringify({

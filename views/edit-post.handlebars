@@ -4,14 +4,13 @@
   <h2 class="title is-size-2 has-text-black">Edit Post</h2>
   <form class="edit-post-form">
     <div>
-      <!-- <input name="post-title" type="text" value="{{post.title}}" /> -->
       <label for="post-title" class="title is-size-4 has-text-black">Post Title:</label>
       <input class="input" name="post-title" type="text" value="{{post.title}}" />
-      <!-- <span>({{post.post_content}})</span>-->
       <br><br>
       <label for="post-content" class="title is-size-4 has-text-black"</label>Post Content:</label>
       <input class="textarea" name="post-content" type="text" value="{{post.post_content}}" />
     </div>
+    
     <div>
       <p class="meta has-text-black">
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by me on {{format_date post.created_at}}

@@ -5,7 +5,6 @@ const withAuth = require("../../utils/auth");
 
 // get all posts
 router.get("/", (req, res) => {
-  console.log("======================get all posts");
   Post.findAll({
     attributes: [
       "id",
@@ -76,7 +75,6 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", withAuth, (req, res) => {
-  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
     post_content: req.body.post_content,
@@ -103,8 +101,6 @@ router.put("/upvote", withAuth, (req, res) => {
 });
 
 router.put("/:id", withAuth, (req, res) => {
-    console.log(req.body);
-  
   Post.update(
     {
       title: req.body.title,
