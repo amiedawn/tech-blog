@@ -50,7 +50,10 @@ router.get("/", withAuth, (req, res) => {
 });
 
 router.get("/edit/:id", withAuth, (req, res) => {
-  Post.findByPk(req.params.id, {
+  Post.findOne({
+    where: {
+      id: req.params.id
+    },
     attributes: [
       "id",
       "post_content",
@@ -101,7 +104,7 @@ router.get("/create/", withAuth, (req, res) => {
   Post.findAll({
     where: {
       // use the ID from the session
-      user_id: req.session.user_id,
+      user_id: req.session.user_id
     },
     attributes: ["id", "title", "created_at", "post_content"],
     include: [

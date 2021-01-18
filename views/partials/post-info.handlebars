@@ -1,14 +1,13 @@
 <article class="post">
   <div class="title">
-  <!--  <a href="/post/{{id}}" target="_blank">{{title}}</a> -->
     <a href="/post/{{id}}" class="has-text-black is-size-4">{{title}}</a>
   </div>
-  <span class="has-text-black is-size-5">({{post_content}})</span>
+ <!-- <span class="has-text-black is-size-5">({{post_content}})</span> -->
+  <p class="content has-text-black is-size-5">{{post_content}}</p>
   <br><br>
   <div class="meta">
     {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
     |  
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
-  
 </article>
