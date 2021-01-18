@@ -1,21 +1,23 @@
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Post
-  </h2>
+  <a href="/dashboard" class="title is-size-5 has-text-warning"> &larr; Return to Dashboard</a>
+  <br><br>
+  <h2 class="title is-size-2 has-text-black">Edit Post</h2>
   <form class="edit-post-form">
     <div>
-     <!-- <input name="post-title" type="text" value="{{post.title}}" /> -->
-     <label for="post-title">Post Title:</label>
+      <!-- <input name="post-title" type="text" value="{{post.title}}" /> -->
+      <label for="post-title" class="title is-size-4 has-text-black">Post Title:</label>
       <input class="input" name="post-title" type="text" value="{{post.title}}" />
-     <!-- <span>({{post.post_content}})</span>-->
-     <label for="post-content">Post Content:</label>
-     <input class="textarea" name="post-content" type="text" value="{{post.post_content}}" />
+      <!-- <span>({{post.post_content}})</span>-->
+      <br><br>
+      <label for="post-content" class="title is-size-4 has-text-black"</label>Post Content:</label>
+      <input class="textarea" name="post-content" type="text" value="{{post.post_content}}" />
     </div>
     <div>
-      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
+      <p class="meta has-text-black">
+      {{post.vote_count}} {{format_plural "point" post.vote_count}} by me on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+      </p>
     </div>
     <button type="submit">Save Post</button>
     <button type="button" class="delete-post-btn">Delete Post</button>
@@ -24,6 +26,7 @@
 
 <form class="comment-form">
   <div>
+    <label for="comment-body" class="title is-size-4 has-text-black"</label>Comment:</label>
     <textarea name="comment-body"></textarea>
   </div>
 

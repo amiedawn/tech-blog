@@ -18,7 +18,7 @@ body, html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  color: rgb(39, 30, 30);
 }
 
 /* homepage post title */
@@ -60,6 +60,7 @@ textarea, input {
   padding: .5%;
   border-radius: 5px;
   border: 1px solid #ccc;
+  overflow-wrap: break-word;
 }
 
 textarea:focus, input:focus {
@@ -91,7 +92,7 @@ form label {
 
 /* navigation menu */
 header {
-  border-bottom: 1px solid #ccc;
+ /* border-bottom: 1px solid #ccc; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -152,7 +153,7 @@ main {
 .post .title span {
   
   font-size: 60%;
-  color: #302929;
+  color: black;
 }
 
 /* number in ol on homepage and comment line */
@@ -194,13 +195,14 @@ main {
 .comment {
   font-size: 25px;
   margin-bottom: .5%;
-  opacity: .6;
+  opacity: .8;
   color: rgb(32, 23, 23);
 
 }
 
 .meta {
   font-size: 20px;
+  color: black;
 }
 
 .new-post-form input {
@@ -212,7 +214,7 @@ main {
 }
 
 footer {
-  border-top: 1px solid #ccc;
+  /*border-top: 1px solid #ccc; */
   display: flex;
   justify-content: center;
   padding: 1%;

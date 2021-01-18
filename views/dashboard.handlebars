@@ -1,5 +1,5 @@
 <section>
-  <h2 class="title pb-4">DASHBOARD: My Activity</h2>
+  <h2 class="title is-size-2 has-text-black">DASHBOARD: My Activity</h2>
   <div class="mb-5 pt-3">
     <a href="/dashboard/create/"><button id="add-post" class="btn is-warning is-pulled-left">
         Create a New Post</button>
@@ -25,12 +25,13 @@
 {{#if posts.length}}
 <section>
   <br><br>
-  <h2 class=title pb-2">My Posts:</h2>
+  <h2 class="title is-size-3 has-text-black">My Posts:</h2>
   <ol>
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}"><button class="button is-warning">Edit Post</button></a>
+      <a href="/dashboard/edit/{{post.id}}"><button class="btn is-warning">Edit Post</button></a>
+      <br><br>
 
   <!--    </button></a> class="edit-link">Edit post</a>-->
     </li>
@@ -41,6 +42,6 @@
 {{else}}
 <br>
 <!--if no posts yet, tell user-->
-<h3 class="is-size-4">No posts have been submitted by this user</h3>
+<h3 class="is-size-4 has-text-black">No posts have been submitted by this user</h3>
 {{/if}}
 <script src="/javascript/add-post.js"></script>
