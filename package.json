@@ -1,7 +1,7 @@
 {
   "name": "tech-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a CMS-style blog site",
   "main": "server.js",
   "start": "node server.js",
   "scripts": {
