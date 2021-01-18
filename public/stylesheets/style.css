@@ -3,14 +3,14 @@
 }
 
 html { 
-   background-color: rgb(30, 102, 124);
+ background-color: rgb(30, 102, 124);
 }
 
 hr{
-    margin-top: 10px;
-    width:100%;
-    height:2px;
-    background:black;
+  margin-top: 10px;
+  width:100%;
+  height:2px;
+  background:black;
 }
 
 body, html {
@@ -48,7 +48,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: green;
 }
 
 .post-list {
@@ -134,11 +134,11 @@ main {
 }
 
 .delete-post-btn {
-  background-color: #d41414;
+  background-color: orange;
 }
 
 .delete-post-btn:hover {
-  background-color: #ff643d;
+  background-color: green;
 }
 
 /* per post tagline on homepage */
@@ -170,12 +170,12 @@ main {
 }
 
 .upvote-btn {
-  background-color: #197d0f;
+  background-color: orange;
   transition: background-color .1s;
 }
 
 .upvote-btn:hover {
-  background-color: #1f9c13;
+  background-color: green;
 }
 
 .comment-form {

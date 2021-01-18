@@ -1,16 +1,13 @@
 <section>
-    
-    
-      <h2 class="title pb-4">DASHBOARD: My Activity</h2>
-      <div class="mb-5 pt-3">
-        <a href="/dashboard/create/"><button id="create-post" class="new-post-form has-background-warning is-pulled-left">
-            Create a New Post</button>
-        </a>
-      <br>
-    
-    </div>
+  <h2 class="title pb-4">DASHBOARD: My Activity</h2>
+  <div class="mb-5 pt-3">
+    <a href="/dashboard/create/"><button id="add-post" class="btn is-warning is-pulled-left">
+        Create a New Post</button>
+    </a>
+    <br>
+  </div>
 
-  <form class="new-post-form">
+  {{!-- <form class="new-post-form">
     <div>
       <br><br>
       <label for="post-title" class="is-size-4">Title:</label>
@@ -22,8 +19,9 @@
     </div>
     <button type="submit" class="btn">Submit New Post</button>
   </form>
-</section>
+</section> --}}
 
+<!--if there are any posts for this user, show them-->
 {{#if posts.length}}
 <section>
   <br><br>
@@ -32,7 +30,9 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}"><button class="button is-warning">Edit Post</button></a>
+
+  <!--    </button></a> class="edit-link">Edit post</a>-->
     </li>
     {{/each}}
   </ol>
@@ -40,6 +40,7 @@
 
 {{else}}
 <br>
-<h3 class="is-size-3">No posts have been submitted by this user</h3>
+<!--if no posts yet, tell user-->
+<h3 class="is-size-4">No posts have been submitted by this user</h3>
 {{/if}}
 <script src="/javascript/add-post.js"></script>
