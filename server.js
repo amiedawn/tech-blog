@@ -19,7 +19,7 @@ const sess = {
   secret: "Super secret secret",
   cookie: {
     // session automatically terminates if no activity for 10 min (need resave and rolling to be true)
-    expires:10*60*1000,
+    expires:20*60*1000,
   },
   resave: true,
   rolling: true,
