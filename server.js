@@ -19,9 +19,9 @@ const sess = {
   secret: "Super secret secret",
   cookie: {
     // session automatically terminates if no activity for 10 min (need resave and rolling to be true)
-    maxAge: 600000,
+    expires:10*60*1000,
   },
-  resave: false,
+  resave: true,
   rolling: true,
   saveUninitialized: true,
   store: new SequelizeStore({
